@@ -8,9 +8,11 @@ WORKDIR /var/www/aspnetcoreapp
 
 COPY . .
 
+RUN dotnet build
+
 EXPOSE 5000
 
-CMD ["dotnet restore && dotnet run"]
+CMD ["dotnet", "run"]
 
 # Note that this is only for demo and is intended to keep things simple.
 # A multi-stage dockerfile would normally be used here to build the .dll and use

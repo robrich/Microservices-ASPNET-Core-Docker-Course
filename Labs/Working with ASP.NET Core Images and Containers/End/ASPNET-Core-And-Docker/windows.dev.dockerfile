@@ -9,10 +9,10 @@ EXPOSE      5000
 
 WORKDIR     /app
 
-CMD         ["dotnet restore && dotnet build && dotnet watch run"]
+CMD         dotnet restore && dotnet build && dotnet watch run
 
 
 # Run the following:
-# 1. docker build -f windows.dev.dockerfile -t aspnetcore-dev .  
+# 1. docker build -f windows.dev.dockerfile -t aspnetcore-dev .
 # 2. docker run -p 5000:5000 -v %cd%:/app aspnetcore-dev
 # 3. Visit http://localhost:5000 in the browser.

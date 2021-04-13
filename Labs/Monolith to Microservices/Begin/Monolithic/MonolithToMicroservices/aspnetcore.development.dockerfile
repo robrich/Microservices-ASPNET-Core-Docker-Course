@@ -9,4 +9,4 @@ EXPOSE 5000
 
 WORKDIR /var/www/aspnetcoreapp
 
-CMD ["/bin/sh", "-c", "dotnet restore && dotnet run"]
+CMD dotnet restore && dotnet watch run
